@@ -1,0 +1,73 @@
+name: Beta bug report
+description: Something in a beta is broken or wrong.
+title: "[Bug] "
+labels: [beta, bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing. Issues here are public, so leave out your licence key, passwords and private URLs.
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Plugin
+      options:
+        - Subset SEO Pro
+        - Subset SEO
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: The plugin's version, and the free plugin's for a Pro add-on (Plugins screen).
+      placeholder: Subset SEO Pro 0.1.0, Subset SEO 0.2.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: WordPress and PHP
+      description: From Tools › Site Health › Info. Say if it's a multisite.
+      placeholder: WordPress 6.8, PHP 8.2, single site
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to …
+        2. Click …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: Error messages, screenshots, and anything in the PHP error log or the browser console.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How bad is it?
+      options:
+        - Lost or broke data, or a fatal error
+        - A feature doesn't work
+        - Something's wrong but there's a way around it
+        - Cosmetic
+    validations:
+      required: true
+  - type: textarea
+    id: plugins
+    attributes:
+      label: Other plugins and theme
+      description: Optional. The active theme and any SEO, cache, WooCommerce or multilingual plugins.

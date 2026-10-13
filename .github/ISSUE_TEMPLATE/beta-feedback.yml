@@ -1,0 +1,33 @@
+name: Beta feedback
+description: Anything else about a beta, such as what's confusing, what's missing, or what works well.
+title: "[Feedback] "
+labels: [beta, feedback]
+body:
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Plugin
+      options:
+        - Subset SEO Pro
+        - Subset SEO
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: feature
+    attributes:
+      label: Feature
+      description: Optional. Which part of the plugin, if it's about one.
+      placeholder: Content audit, Local SEO, schema builder…
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+    validations:
+      required: true
+  - type: input
+    id: site
+    attributes:
+      label: Your site
+      description: Optional. What kind of site you're using it on, and roughly how many posts or products.
+      placeholder: WooCommerce store, about 2,000 products
