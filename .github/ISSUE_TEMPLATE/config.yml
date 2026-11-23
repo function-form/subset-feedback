@@ -3,3 +3,6 @@ contact_links:
   - name: Billing and your account
     url: https://subsetwp.com/contact
     about: Licences, payments, invoices and your subsetwp.com account.
+  - name: Report a security vulnerability
+    url: https://github.com/function-form/subset-feedback/security/advisories/new
+    about: Report security problems privately here, not in a public issue.
